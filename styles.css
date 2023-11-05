@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+}
+
+.calc_body {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(46, 46, 46);
+    width: 600px;
+    height: 812px;
+    margin-top: 50px;
+}
+
+.display {
+    display: flex;
+    justify-content: end;
+    align-self: center;
+    align-items: center;
+    width: 90%;
+    height: 28%;
+    font-size: xxx-large;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buttons div {
+    width: 148px;
+    display: flex;
+    height: 117px;
+    border: 1px solid #dfdfdf;
+    justify-content: center;
+    align-items: center;
+    font-size: xxx-large;
+}
+
