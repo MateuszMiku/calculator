@@ -11,6 +11,7 @@ body {
     width: 592px;
     height: 812px;
     margin-top: 50px;
+    border-color:  rgba(201, 201, 201, 0.575);
 }
 
 .display {
@@ -21,6 +22,7 @@ body {
     width: 90%;
     height: 28%;
     font-size: xxx-large;
+    overflow: overlay;
 }
 
 .buttons {
@@ -89,5 +91,9 @@ button.equals {
 
 .align_bitches {
     display: flex;
+}
+
+#lenny {
+    font-size: x-large;
 }
 
