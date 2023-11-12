@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     border: 1px solid rgb(46, 46, 46);
-    width: 600px;
+    width: 592px;
     height: 812px;
     margin-top: 50px;
 }
@@ -25,11 +25,11 @@ body {
 
 .buttons {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    color: #000000d1;
 }
 
-.buttons div {
+.buttons button {
     width: 148px;
     display: flex;
     height: 117px;
@@ -37,5 +37,23 @@ body {
     justify-content: center;
     align-items: center;
     font-size: xxx-large;
+}
+
+.side_btn {
+    color: #6262ff;
+    background-color: #63636317;
+}
+
+.equals {
+    color: white;
+    background-color: #6262ff;
+}
+
+.buttons button:active {
+    background-color: rgba(201, 201, 201, 0.575);
+}
+
+.buttons button.equals:active {
+    background-color: #3c3cff;
 }
 
