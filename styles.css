@@ -39,6 +39,23 @@ body {
     font-size: xxx-large;
 }
 
+.buttons_lower {
+    display: flex;
+    flex-wrap: wrap;
+    color: #000000d1;
+    width: 75%;
+}
+
+.buttons_lower button {
+    width: 148px;
+    display: flex;
+    height: 117px;
+    border: 1px solid #dfdfdf;
+    justify-content: center;
+    align-items: center;
+    font-size: xxx-large;
+}
+
 .side_btn {
     color: #6262ff;
     background-color: #63636317;
@@ -49,11 +66,28 @@ body {
     background-color: #6262ff;
 }
 
-.buttons button:active {
+button.equals {
+    border: 1px solid #6262ff;
+    justify-content: center;
+    align-items: center;
+    font-size: xxx-large;
+}
+
+.buttons button:active, .buttons_lower button:active {
     background-color: rgba(201, 201, 201, 0.575);
 }
 
-.buttons button.equals:active {
+button.equals:active {
     background-color: #3c3cff;
+    border: 1px solid #3c3cff;
+}
+
+button.equals {
+    height: 234px;
+    width: 25%;
+}
+
+.align_bitches {
+    display: flex;
 }
 
