@@ -34,12 +34,31 @@ function operate(firstNumber, operator, secondNumber) {
 let numbers = Array.from(document.getElementsByClassName('number'));
 let display = document.querySelector('.display');
 
+const addition = document.getElementById('add');
+const subtraction = document.getElementById('subtract');
+const division = document.getElementById('divide');
+const multiplication = document.getElementById('multiply');
+
 //displaying and storing numbers
 numbers.forEach(num => num.addEventListener('click', function() {
     display.innerHTML += this.innerHTML;
     let displayValue = parseInt(display.innerHTML);
     console.log(displayValue);
+
+    addition.addEventListener('click', function() {
+      firstNumber = displayValue;
+      operator = "+";
+      if (display.innerHTML.includes("+")){
+        return;
+      } else {
+        display.innerHTML += "+";
+      }})
 }));
+
+
+
+
+
 
 // Clear button
 const clearButton = document.getElementById('clear');
@@ -64,6 +83,14 @@ deleteButton.addEventListener('click', function(){
         console.log(displayValue);
     }
 });
+
+// Equals button
+const equalsButton = document.getElementsByClassName('equals');
+equalsButton.addEventListener('click', function(firstNumber, operator, secondNumber) {
+  let result = operate(firstNumber, operator, secondNumber);
+  console.log(result)
+}
+)
 
 
 
