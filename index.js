@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const clearButton = document.getElementById('clear');
   const deleteButton = document.getElementById('delete');
   const equalsButton = document.querySelector('.equals');
+  const commaButton = document.getElementById('comma');
 
   function operate(x, operator, y) {
     switch (operator) {
@@ -21,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
       case '*':
         return x * y;
       case '/':
-        return y !== 0 ? x / y : 'Error'; // Handle division by zero
+        return y !== 0 ? x / y : 'ej kurwa';
       default:
         return 'Error';
     }
@@ -79,6 +80,30 @@ document.addEventListener('DOMContentLoaded', function () {
       firstNumber = result;
       operator = null;
       secondNumber = null;
+    }
+  });
+
+  commaButton.addEventListener('click', function () {
+    if (!display.innerHTML.includes('.')) {
+      display.innerHTML += '.';
+    } else if (display.innerHTML.includes('.') && operator != null) {
+      display.innerHTML += '.';
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    const key = event.key;
+
+    if (!isNaN(key) || key == '.') {
+      display.innerHTML += key;
+    } else if (key == 'Enter') {
+      equalsButton.click();
+    } else if (key == 'Backspace') {
+      deleteButton.click();
+    } else if (key == 'Escape') {
+      clearButton.click();
+    } else if (['+', '-', '*', '/'].includes(key)) {
+      handleOperatorClick(key);
     }
   });
 });
