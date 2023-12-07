@@ -16,13 +16,13 @@ body {
 
 .display {
     display: flex;
-    justify-content: end;
     align-self: center;
     align-items: center;
     width: 88%;
     height: 28%;
     font-size: xxx-large;
-    overflow: overlay;
+    overflow-x: auto;
+    flex-flow: row-reverse;
 }
 
 .buttons {
@@ -95,5 +95,9 @@ button.equals {
 
 #lenny {
     font-size: x-large;
+}
+
+.alano {
+    background-image: url(https://media.tenor.com/rmuJ2VJUM28AAAAd/fame-mma.gif);
 }
 

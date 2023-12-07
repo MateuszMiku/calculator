@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const deleteButton = document.getElementById('delete');
   const equalsButton = document.querySelector('.equals');
   const commaButton = document.getElementById('comma');
+  const lennyButton = document.getElementById('lenny');
 
   function operate(x, operator, y) {
     switch (operator) {
@@ -55,6 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
   division.addEventListener('click', function () {
     handleOperatorClick('/');
   });
+
+  lennyButton.addEventListener('click', function () {
+    const calcBody = document.querySelector('.calc_body');   
+        calcBody.classList.toggle('alano');
+});
+
 
   clearButton.addEventListener('click', function () {
     display.innerHTML = '';
